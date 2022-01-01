@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    :mini-variant="miniVariant"
+    :miniVariant="miniVariant"
     :clipped="clipped"
     fixed
     app
@@ -30,20 +30,16 @@ import { Component, Vue, Prop } from "nuxt-property-decorator";
 
 @Component
 export default class ESDrawer extends Vue {
-  clipped: any = true;
-  drawer: any = false;
-  fixed: any = false;
-  miniVariant: any = false;
+  @Prop({ type: Boolean }) drawer!: Boolean;
+  @Prop({ type: Boolean }) clipped!: Boolean;
+  @Prop({ type: Boolean }) fixed!: Boolean;
+  @Prop({ type: Boolean }) miniVariant!: Boolean;
+
   private items: Array<object> = [
     {
       icon: "mdi-apps",
-      title: "Welcome",
+      title: "Home",
       to: "/",
-    },
-    {
-      icon: "mdi-chart-bubble",
-      title: "Inspire",
-      to: "/inspire",
     },
     {
       icon: "mdi-chart-bubble",

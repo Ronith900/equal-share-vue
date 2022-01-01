@@ -1,6 +1,11 @@
 <template>
   <v-app dark>
-    <ESDrawer />
+    <ESDrawer
+      :drawer="drawer"
+      :clipped="clipped"
+      :fixed="fixed"
+      :miniVariant="miniVariant"
+    />
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -30,8 +35,8 @@ import ESDrawer from "@/components/drawer.vue";
 export default class DefaultLayout extends Vue {
   title: string = "Equal Share";
   clipped: any = true;
-  drawer: any = false;
+  drawer: boolean = false;
   fixed: any = false;
-  miniVariant: any = false;
+  miniVariant: boolean = false;
 }
 </script>

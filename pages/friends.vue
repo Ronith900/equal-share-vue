@@ -1,7 +1,11 @@
 <template>
-  <v-row>
-    <h4>{{ title }}</h4>
-  </v-row>
+  <v-container>
+    <v-row>
+      <v-col v-for="n in 3" :key="n">
+        <v-card class="pa-2" outlined tile> One of three columns </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
