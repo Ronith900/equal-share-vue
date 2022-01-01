@@ -27,10 +27,11 @@ import ESDrawer from "@/components/drawer.vue";
     ESDrawer,
   },
 })
-export default class HelloWorld extends Vue {
+export default class DefaultLayout extends Vue {
   title: string = "Equal Share";
-  clipped: boolean = true;
-  drawer: boolean = false;
-  fixed: boolean = false;
+  clipped: any = true;
+  drawer: any = false;
+  fixed: any = false;
+  miniVariant: any = false;
 }
 </script>
